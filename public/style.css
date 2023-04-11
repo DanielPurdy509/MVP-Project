@@ -2,14 +2,82 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    font-family: 'Yeseva One';
+    height: 100px;
+    background-color: forestgreen;
+    opacity: 80%;
     padding: 10px;
-  }
-  
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    border-bottom: 2px solid black;
+}
+
+/* #header_container {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    width:100%;
+    height:90px;
+    object-fit: contain;
+
+} */
+
+#page_logo {
+    height: 100px;
+    width: 100px;
+}
+
+#login_prompt_container {
+    background-color: aqua;
+    padding: 50px;
+    display: block;
+}
+
+#page_title{
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 4px 4px 8px black;
+    font-family: 'Yeseva One';
+    font-weight: bold;
+}
+
+#sub_title {
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 4px 4px 8px black;
+    font-family: 'Yeseva One';
+}
+
+.button {
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    font-family: 'Yeseva One';
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px black;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.button:hover, .button:focus, button:active{
+    box-shadow: 8px 8px 10px black;
+    -webkit-transform: scale(1.1);
+    transform: (1.1);
+}
+
+#login_button {
+  background-color: goldenrod;
+}
+
+#signup_button {
+    right: 30px;
+}
 
 footer {
     position: fixed;
