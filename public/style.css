@@ -69,6 +69,77 @@ header {
 #signup_button {
     right: 30px;
 }
+/* Body Stuff ###################################### */
+
+#canvas{
+    background-image: url("/public/images/background_image.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center center;
+    height: 421px;
+    opacity: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 122px;
+    margin-bottom: 50px;
+}
+
+#card_container{
+    position: relative;
+    height: 350px;
+    width: 250px;
+    /* background: green; */
+}
+#card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    /* background-color: red; */
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+#card:hover{
+    transform: rotateY(180deg);
+}
+
+#card_front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background: goldenrod;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#subject{
+    text-align: center;
+    font-family: "Cormorant Garamond";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#definition{
+    text-align: center;
+    font-family: "Cormorant Garamond";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#card_back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background: tomato;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+}
 
 /* Footer Stuff #################################### */
 
