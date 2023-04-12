@@ -14,15 +14,14 @@ client.connect();
 
 app.use(express.json());
 
-app.get("/", function(req, res) {   
+app.get("/api/test", function(req, res) {   
     res.send("Hello, world!");
 });
 
-app.get('/api/test', function(req, res) {
-    client.query(`SELECT * FROM users`, function(err, response) {
+app.get('/api/cards', function(req, res) {
+    client.query(`SELECT * FROM cards`, function(err, response) {
         console.log(err ? err : response.rows)
         res.json(response.rows)
-        client.end;
     })
 })
 
