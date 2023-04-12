@@ -25,16 +25,42 @@
             <button id="login_button" class="button">Login</button>
             <button id="signup_button" class="button">Sign Up</button>
     </header>
+    <form id="login_form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <form id="new_card_form">
+        <label for="subject">Card Subject:</label>
+        <input type="text" id="subject" name="subject">
+        <br>
+        <label for="definition">Card Definition:</label>
+        <input type="text" id="definition" name="definition">
+        <br>
+        <input type="submit" value="Submit">
+    </form>   
     <div id="canvas">
+        <div id="left_panel" class="flexbox_column">        
+            <button id="previous_button" class="button">Previous</button>
+            <button id="add_new_button" class="button">Add New Card</button>
+        </div>
         <div id="card_container">
             <div id="card">
                 <div id="card_front">
                     <p id="subject">Front</p>
                 </div>
                 <div id="card_back">
-                    <p id="definition">Back</p>
+                    <p id="card_definition">Back</p>
                 </div>
             </div>
+        </div>
+        <div id="right_panel" class="flexbox_column">
+            <button id="next_button" class="button">Next</button>
+            <button id="delete_current_button" class="button">Delete Current Card</button>
         </div>
     </div>
     <footer>
