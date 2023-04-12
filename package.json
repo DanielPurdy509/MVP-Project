@@ -4,9 +4,20 @@
   "description": "A full stack application built over the course of two days. A flash card website that rotates through a user's unique card deck. Also incorporates a database for persisting user information and card decks.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.10.0"
+  },
+  "devDependencies": {
+    "httpie": "^1.1.2",
+    "nodemon": "^2.0.22"
+  }
 }
