@@ -104,6 +104,7 @@ body {
     font-family: 'Yeseva One';
     font-weight: bold;
     margin-top: 100px;
+    visibility: visible;
     /* visibility: hidden; */
 }
 
@@ -120,6 +121,7 @@ body {
     font-family: 'Yeseva One';
     font-weight: bold;
     margin-top: 100px;
+    visibility: visible;
     /* visibility: hidden; */
 }
 
@@ -189,6 +191,7 @@ input[type=submit] {
     width: 120px;
     font-size: 20px;
     background-color: aquamarine;
+    visibility: visible;
 }
 
 #delete_current_button {
@@ -196,6 +199,7 @@ input[type=submit] {
   width: 120px;
   font-size: 20px;
   background-color: tomato;
+  visibility: visible;
 }
 
 /* Flipping Flash Card ######################################## */
@@ -234,7 +238,7 @@ input[type=submit] {
     box-shadow: 8px 8px 10px black;
 }
 
-#subject{
+#card_subject{
     text-align: center;
     font-family: "Cormorant Garamond";
     font-size: 30px;

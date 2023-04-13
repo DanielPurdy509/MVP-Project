@@ -18,8 +18,26 @@ app.get("/api/test", function(req, res) {
     res.send("Hello, world!");
 });
 
-app.get('/api/cards', function(req, res) {
-    client.query(`SELECT * FROM cards`, function(err, response) {
+app.get('/api/login',(req,res) => {
+    let username = req.query.param1;
+    let password = req.query.param2;
+    client.query(`SELECT * FROM users WHERE name = $1 AND password = $2`, [username,password])
+    .then((result) => {
+        if(result.rows.length == 0){
+            console.log(result);
+            res.status(404).send("The user could not be found");
+        }
+        else {
+            res.status(200).send("Request handled successfully");
+        }
+        // else{
+            // client.query(`SELECT * FROM cards WHERE `)
+        // }
+    })
+})
+
+app.get('/api/cards',(req, res) => {
+    client.query(`SELECT * FROM cards;`, (err, response) => {
         console.log(err ? err : response.rows)
         res.json(response.rows)
     })

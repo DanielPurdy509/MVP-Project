@@ -32,7 +32,7 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password">
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="login_submit">
     </form>
     <form id="new_card_form">
         <label for="subject">Card Subject:</label>
@@ -41,7 +41,7 @@
         <label for="definition">Card Definition:</label>
         <input type="text" id="definition" name="definition">
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="card_submit">
     </form>   
     <div id="canvas">
         <div id="left_panel" class="flexbox_column">        
@@ -51,10 +51,10 @@
         <div id="card_container">
             <div id="card">
                 <div id="card_front">
-                    <p id="subject">Front</p>
+                    <p id="card_subject"></p>
                 </div>
                 <div id="card_back">
-                    <p id="card_definition">Back</p>
+                    <p id="card_definition"></p>
                 </div>
             </div>
         </div>
