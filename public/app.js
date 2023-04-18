@@ -1,8 +1,8 @@
 
-    fetch('/api/cards')
-    .then(response => {
-        console.log(response);
-    })
+fetch('/api/cards')
+.then(response => {
+    console.log(response);
+})
 
 // Flash Card Functionality --------------------------------------------------------
 
@@ -11,34 +11,37 @@ const cards = [
     {subject:"CSS",definition:"Cascading Style Sheets"},
     {subject:"JS",definition:"JavaScript"}
 ];
+
+
 const frontCard = document.querySelector("#card_subject");
 const backCard = document.querySelector("#card_definition");
 
 var currentIndex = 0;
-function setCard (currentIndex,cards) {
-    frontCard.innerHTML = cards[currentIndex].subject;
-    backCard.innerHTML = cards[currentIndex].definition;
-};
-setCard(currentIndex,cards);
 
-// Previous and Next Buttons
+frontCard.innerHTML = cards[currentIndex].subject;
+backCard.innerHTML = cards[currentIndex].definition;
+
+
+// Previous and Next Buttons---------------------------------------------------------
 
 const nextButton = document.querySelector("#next_button");
 const previousButton = document.querySelector("#previous_button")
 
-nextButton.addEventListener("click",function(currentIndex,cards,frontCard,backCard) {
-    currentIndex ++;
-    frontCard.innerHTML = cards[currentIndex].subject;
-    backCard.innerHTML = cards[currentIndex].definition;
+nextButton.addEventListener("click",() => {
+    frontCard.innerHTML = cards[1].subject;
+    backCard.innerHTML = cards[1].definition;
 })
 
-if(currentIndex == 0){
-    previousButton.style.visibility = "hidden";
-} else {
-    previousButton.style.visibility = "visible";
-}
+previousButton.addEventListener("click",() => {
+    frontCard.innerHTML = cards[0].subject;
+    backCard.innerHTML = cards[0].definition;    
+})
 
-
+// if(currentIndex == 0){
+//     previousButton.style.visibility = "hidden";
+// } else {
+//     previousButton.style.visibility = "visible";
+// }
 
 // Variables and Event Listeners for Form Visiblity --------------------------------
 const addCardButton = document.querySelector("#add_new_button");

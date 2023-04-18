@@ -219,6 +219,7 @@ input[type=submit] {
     /* background-color: red; */
     transform-style: preserve-3d;
     transition: all 1s ease;
+    border-radius: 20px;
     box-shadow: 8px 8px 10px black;
 }
 
